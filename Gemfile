@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'haml'
 gem 'pry'
 gem 'devise'
+gem 'omniauth-facebook'
 
 group :test do
   gem 'rspec-rails'
