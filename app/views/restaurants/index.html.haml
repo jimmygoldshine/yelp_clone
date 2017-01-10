@@ -3,7 +3,7 @@
   - @restaurants.each do |restaurant|
     .listing
       %h2= link_to restaurant.name, restaurant_path(restaurant)
-      %h5= restaurant.description
+      %h4= restaurant.description
       - if restaurant.reviews.any?
         - restaurant.reviews.each do |review|
           %p= review.thoughts
