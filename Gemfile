@@ -36,6 +36,7 @@ gem 'haml'
 gem 'pry'
 gem 'devise'
 gem 'omniauth-facebook'
+gem 'envyable'
 
 group :test do
   gem 'rspec-rails'
