@@ -33,6 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 gem 'haml'
+gem 'pry'
 
 group :test do
   gem 'rspec-rails'
