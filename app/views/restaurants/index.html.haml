@@ -7,9 +7,10 @@
       %p= restaurant.description
       - restaurant.reviews.each do |review|
         %p= review.thoughts
+        %p= link_to "Endorse Review", review_endorsements_path(review), method: :post
         - if @user
           - if @user.reviews.include?(review)
-            %p= link_to "Delete Review", restaurant_review_path(restaurant,review), method: :delete
+            %p= link_to "Delete Review", review_path(review), method: :delete
       - if @user
         - if @user.restaurants.include?(restaurant)
           %p= link_to "Edit #{restaurant.name}", edit_restaurant_path(restaurant)
