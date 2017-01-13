@@ -29,6 +29,12 @@ feature 'restaurants' do
         expect(page).to have_content 'KFC'
         expect(page).not_to have_content 'No restaurants yet'
       end
+
+      scenario 'has an image attached' do
+        add_restaurant_with_image
+        expect(page).to have_content('KFC2')
+        expect(page).to have_css("img[src*='kfc.png']")
+      end
     end
 
     context 'creating restaurants' do

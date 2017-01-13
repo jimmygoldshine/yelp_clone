@@ -33,3 +33,12 @@ def add_review
   select '1', from: "Rating"
   click_button 'Leave review'
 end
+
+def add_restaurant_with_image
+  visit('/')
+  click_link 'Add a restaurant'
+  fill_in 'Name', with: 'KFC2'
+  fill_in 'Description', with: 'Finger Licking'
+  page.attach_file('restaurant_image', Rails.root + 'spec/assets/kfc.png')
+  click_button "Create Restaurant"
+end
