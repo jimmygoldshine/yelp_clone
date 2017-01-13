@@ -3,7 +3,7 @@
   - @restaurants.each do |restaurant|
     #listing
       %h2= link_to restaurant.name, restaurant_path(restaurant)
-      .image= image_tag restaurant.image.url(:thumb)
+      = image_tag restaurant.image.url(:thumb)
       %p= restaurant.description
       - restaurant.reviews.each do |review|
         %p= review.thoughts

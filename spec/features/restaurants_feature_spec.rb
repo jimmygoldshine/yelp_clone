@@ -32,6 +32,7 @@ feature 'restaurants' do
 
       scenario 'has an image attached' do
         add_restaurant_with_image
+        byebug
         expect(page).to have_content('KFC2')
         expect(page).to have_css("img[src*='kfc.png']")
       end
